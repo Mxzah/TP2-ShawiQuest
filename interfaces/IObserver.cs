@@ -1,4 +1,4 @@
 interface IObserver
 {
-    void Update(int delta, int currentHealth);
+    void Update(int delta, int currentHealth, Player target);
 }

@@ -1,23 +1,15 @@
 class HealthBar : IObserver
 {
-
-    public void Update(int delta, int currentHealth)
+    public void Update(int delta, int currentHealth, Player target)
     {
-        if (delta < 0)
+        if (delta <= 0)
         {
             UpdateLoss(currentHealth, -delta);
-        }
-        else if (delta > 0)
-        {
-            UpdateHeal(currentHealth, delta);
         }
     }
     public void UpdateLoss(int currentHealth, int damage)
     {
         Console.WriteLine($"Health Bar : {currentHealth} (Lost {damage} hp)");
     }
-    public void UpdateHeal(int currentHealth, int heal)
-    {
-        Console.WriteLine($"Health Bar : {currentHealth} (Gained {heal} hp)");
-    }
+
 }

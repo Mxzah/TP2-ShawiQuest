@@ -25,6 +25,8 @@ class Player : ISubject
         }
     }
     public Weapon? Weapon { get; private set; }
+    public Defense? Defense { get; private set; }
+
     private List<IObserver> observers = new List<IObserver>();
     public Player(string name)
     {
@@ -35,9 +37,13 @@ class Player : ISubject
     {
         Weapon = weapon;
     }
+    public void EquipDefense(Defense defense)
+    {
+        Defense = defense;
+    }
     public void Attack(Player target)
     {
-        int damage = 10;
+        int damage = 5;
         string sound = "";
         if (Weapon != null)
         {
@@ -46,27 +52,36 @@ class Player : ISubject
         }
         if (!string.IsNullOrEmpty(sound))
         {
-            Console.WriteLine($"{Name} attacks with: {sound}");
+            Console.WriteLine($"{Name} attacks with: {Weapon.ToString()} - Sound: {sound}");
         }
         target.TakesDamage(damage);
     }
     public void TakesDamage(int damage)
     {
+        if (Defense != null)
+        {
+            int defenseValue = Defense.Defend();
+            string defenseSound = Defense.DefendSound();
+            damage = (damage - defenseValue);
+            if (damage < 0) damage = 0;
+            if (!string.IsNullOrEmpty(defenseSound))
+            {
+                Console.WriteLine($"{Name} defends with: {Defense.ToString()} - Sound: {defenseSound}");
+            }
+        }
         HealthPoints -= damage;
         Notify(-damage);
-    }
-
-    public void Heal()
-    {
-        Random rnd = new Random();
-        int heal = rnd.Next(5, 21);
-        HealthPoints += heal;
-        Notify(heal);
     }
     
     public void Attach(IObserver observer)
     {
         observers.Add(observer);
+    }
+
+    public void Reset()
+    {
+        HealthPoints = 100;
+        Notify(0);
     }
 
     public void Detach(IObserver observer)
@@ -78,7 +93,7 @@ class Player : ISubject
     {
         foreach (var observer in observers)
         {
-            observer.Update(delta, HealthPoints);
+            observer.Update(delta, HealthPoints, this);
         }
     }
 }
