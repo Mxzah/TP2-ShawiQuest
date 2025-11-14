@@ -2,7 +2,7 @@ class Katana : Weapon
 {
     private int damage = 20;
 
-    public Katana(int damage) { }
+    public Katana() { }
 
     public override int Attack()
     {

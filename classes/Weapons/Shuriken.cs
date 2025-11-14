@@ -2,7 +2,7 @@ class Shuriken : Weapon
 {
     private int damage = 10;
 
-    public Shuriken(int damage) { }
+    public Shuriken() { }
 
     public override int Attack()
     {

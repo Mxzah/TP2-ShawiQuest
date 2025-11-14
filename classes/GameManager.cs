@@ -9,11 +9,13 @@ class GameManager
     private Weapon[] _weapons;
     private Defense[] _defenses;
     private GameOverManager _gameOverManager;
-    public WeaponDecorator weaponDecorator;
-    public GameManager(Player player1, Player player2, float damageRatio = 1f, int timeBetweenTurns = 1000)
+    public GameManager(Player player1, Player player2, IReadOnlyList<Weapon> weapons, IReadOnlyList<Defense> defenses, float damageRatio = 1f, int timeBetweenTurns = 1000)
     {
         _player1 = player1;
         _player2 = player2;
+
+        _weapons = weapons.ToArray();
+        _defenses = defenses.ToArray();
 
         _damageRatio = damageRatio;
         _timeBetweenTurns = timeBetweenTurns;
@@ -28,35 +30,6 @@ class GameManager
         _player2.Attach(_gameOverManager);
 
 
-        Weapon regularKatana = new Katana(20);
-        Weapon regularNunchaku = new Nunchaku(15);
-        Weapon regularShuriken = new Shuriken(10);
-
-        _weapons = new Weapon[]
-        {
-            regularKatana,
-            new SharpnessDecorator(regularKatana),
-            regularShuriken,
-            new SharpnessDecorator(regularShuriken),
-            regularNunchaku,
-            new MomentumDecorator(regularNunchaku),
-            new MomentumDecorator(new SharpnessDecorator(regularKatana)),
-
-        };
-
-        Defense regularSmokeBomb = new SmokeBomb();
-        Defense regularShield = new Shield();
-        Defense regularRoll = new Roll();
-        
-        _defenses = new Defense[]
-        {
-            regularSmokeBomb,
-            regularShield,
-            regularRoll,
-            new QuickReflexeDecorator(regularRoll),
-            new QuickReflexeDecorator(regularSmokeBomb),
-            new DiamondDecorator(regularShield)
-        };
     }
 
     public void StartGame()

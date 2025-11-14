@@ -1,6 +1,6 @@
 class Player : ISubject
 {
-    private string _name;
+    private string _name = string.Empty;
     public string Name
     {
         get { return _name; }
@@ -44,15 +44,16 @@ class Player : ISubject
     public void Attack(Player target)
     {
         int damage = 5;
-        string sound = "";
-        if (Weapon != null)
+        string sound = string.Empty;
+        var weapon = Weapon;
+        if (weapon != null)
         {
-            damage = Weapon.Attack();
-            sound = Weapon.AttackSound();
+            damage = weapon.Attack();
+            sound = weapon.AttackSound();
         }
         if (!string.IsNullOrEmpty(sound))
         {
-            Console.WriteLine($"{Name} attacks with: {Weapon.ToString()} - Sound: {sound}");
+            Console.WriteLine($"{Name} attacks with: {weapon?.ToString() ?? "Unarmed"} - Sound: {sound}");
         }
         target.TakesDamage(damage);
     }

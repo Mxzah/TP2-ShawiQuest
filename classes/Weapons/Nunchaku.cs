@@ -2,7 +2,7 @@ class Nunchaku : Weapon
 {
     private int damage = 15;
 
-    public Nunchaku(int damage) { }
+    public Nunchaku() { }
 
     public override int Attack()
     {
