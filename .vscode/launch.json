@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "ShawiQuest (external console)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/bin/Debug/net9.0/ShawiQuest.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "console":"externalTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}

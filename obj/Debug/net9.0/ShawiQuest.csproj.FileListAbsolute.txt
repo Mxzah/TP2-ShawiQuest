@@ -1,0 +1,14 @@
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.AssemblyInfoInputs.cache
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.AssemblyInfo.cs
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.csproj.CoreCompileInputs.cache
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\bin\Debug\net9.0\ShawiQuest.exe
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\bin\Debug\net9.0\ShawiQuest.deps.json
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\bin\Debug\net9.0\ShawiQuest.runtimeconfig.json
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\bin\Debug\net9.0\ShawiQuest.dll
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\bin\Debug\net9.0\ShawiQuest.pdb
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.dll
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\refint\ShawiQuest.dll
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.pdb
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ShawiQuest.genruntimeconfig.cache
+C:\Users\mizah\Downloads\20251007163740_ShawiQuest_template\ShawiQuest_template\ShawiQuest (template)\obj\Debug\net9.0\ref\ShawiQuest.dll
